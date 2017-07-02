@@ -1,0 +1,20 @@
+- var title = title || "online expert"
+- var viewport = viewport || "initial-scale=1.0, width=device-width"
+- var description = description || "Arsenalmedia - accepting payments from anyone and anywhere. The easy way to accept online payments using bank cards, mobile payments and e-money for your online shop. The payment system created for businesses of any size."
+
+head
+  title Arsenalmedia - #{title}
+  meta(charset="utf-8")
+  meta(name="viewport", content=viewport)
+  meta(name="description", content=description)
+  link(rel="shortcut icon" type="image/x-icon" href="favicon.ico")
+  link(rel="stylesheet", href="css/styles.css")
+
+  script.
+    document.createElement("picture");
+
+  //build:js js/polyfill.js async
+  script(type="text/javascript", src="node_modules/picturefill/dist/picturefill.min.js", async)
+  //endbuild
+
+

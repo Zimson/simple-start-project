@@ -1,0 +1,22 @@
+// main color
+$main-background: #ffffff;
+$main-background-dark:#eeeeee;
+$body-background: #ffffff;
+
+// text color
+$main-black: #000000;
+$support-white: #ffffff;
+$subscription-gray: #868686;
+$support-black: #484848;
+
+
+// screen queries
+$mobile: "only screen and (min-width: 600px)";
+$tablet: "only screen and (min-width: 1000px)";
+$desktop: "only screen and (min-width: 1366px)";
+
+$sub-mobile-width: "only screen and (min-width: 500px)";
+$sub-tablet-width: "only screen and (min-width: 700px)";
+$tablet-width: "only screen and (min-width: 900px)";
+$sub-desktop-width: "only screen and (min-width: 1210px)";
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";

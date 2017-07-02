@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Quicksand';
+  src: local('Quicksand Regular'),
+       local('Quicksand-regular'),
+       url('../fonts/Quicksand-regular.woff2') format('woff2'),
+       url('../fonts/Quicksand-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Mukta Vaani Light';
+  src: local('Mukta Vaani Light'),
+       local('Mukta-Vaani-300'),
+       url('../fonts/Mukta-Vaani-300.woff2') format('woff2'),
+       url('../fonts/Mukta-Vaani-300.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Mukta Vaani';
+  src: local('Mukta Vaani'),
+       local('Mukta-Vaani-regular'),
+       url('../fonts/Mukta-Vaani-regular.woff2') format('woff2'),
+       url('../fonts/Mukta-Vaani-regular.woff') format('woff')
+}

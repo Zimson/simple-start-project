@@ -1,0 +1,13 @@
+.promo-block {
+  align-items: stretch;
+  width: 30%;
+  min-width: 320px;
+  min-height: 150px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  background-color: $main-background-dark;
+
+
+  @import "elements/promo-block__title";
+  @import "elements/-promo-block__description";
+}
