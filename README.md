@@ -20,12 +20,18 @@ $ npm install
 
 dev-server
 
-```
+```sh
 $ npm start
+```
+
+сервер из build-папки
+
+```sh
+$ npm run build:serve
 ```
 
 ### Сборка
 
-```
+```sh
 $ npm run build
 ```
