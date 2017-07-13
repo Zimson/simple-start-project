@@ -10,11 +10,11 @@
     "build:serve": "./node_modules/.bin/gulp build:serve",
     "clean": "./node_modules/.bin/gulp clean",
     "clean:all": "./node_modules/.bin/gulp clean:all",
-    "lint": "eslint .",
-    "pre-commit": [
-      "lint"
-    ]
+    "lint": "./node_modules/.bin/eslint src/js/"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "author": "Bolotin Dmitry",
   "license": "ISC",
   "devDependencies": {
