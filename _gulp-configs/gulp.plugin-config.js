@@ -1,4 +1,7 @@
-"use strict";
+
+const normalize = require('node-normalize-scss').includePaths;
+// -------------------------------------------------------------
+
 
 const browserSyncDev = {
   port: 9000,
@@ -27,15 +30,15 @@ const scssConfig = {
   precision: 10,
   includePaths: [
     '.',
-    require('node-normalize-scss').includePaths
-  ]
+    normalize
+  ],
 };
 
 const autoprefixerConfig = {
   browsers: [
     'last 3 versions',
     '> 1%'
-  ]
+  ],
 };
 
 const mqpackerConfig = {
@@ -46,11 +49,15 @@ const imageminConfig = {
   interlaced: true,
   progressive: true,
   optimizationLevel: 3,
-  svgoPlugins: [{removeViewBox: true}]
+  svgoPlugins: [
+    {
+      removeViewBox: true
+    },
+  ],
 };
 
 const userefConfig = {
-  searchPath: ['./', './src/', './node_modules/']
+  searchPath: ['./', './src/', './node_modules/'],
 };
 
 const sizeConfig = {

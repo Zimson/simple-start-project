@@ -1,6 +1,4 @@
-"use strict";
-
 
 export default function foo() {
-  console.log('module 2');
+  window.console.log('module 2');
 }

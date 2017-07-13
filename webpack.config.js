@@ -1,13 +1,11 @@
-"use strict";
+const webpack = require('webpack');
+const path    = require('path');
 
-const webpack       = require('webpack');
-const path          = require('path');
 const isDevelopment = !process.env.NODE_ENV || (process.env.NODE_ENV === 'development');
 
 
-
 module.exports = {
-  context: __dirname + '/src/js',
+  context: `${__dirname}/src/js`,
   entry: {
     app: ['./_index.js']
   },
@@ -17,17 +15,23 @@ module.exports = {
   devtool: isDevelopment ? 'cheap-module-inline-source-map' : 'false',
 
   output: {
-    path: path.join(__dirname, "src/js"),
+    path: path.join(__dirname, 'src/js'),
     filename: 'index.js',
     publicPath: '/js/'
   },
 
   plugins: [
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -35,11 +39,11 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['env']
-          }
-        }
-      }
-    ]
-  }
+          },
+        },
+      },
+    ],
+  },
 };
 
 
@@ -51,6 +55,5 @@ if (!isDevelopment) {
         drop_console: true,
         unsafe: true
       }
-    })
-  );
+    }));
 }

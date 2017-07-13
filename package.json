@@ -10,7 +10,10 @@
     "build:serve": "./node_modules/.bin/gulp build:serve",
     "clean": "./node_modules/.bin/gulp clean",
     "clean:all": "./node_modules/.bin/gulp clean:all",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "pre-commit": [
+      "lint"
+    ]
   },
   "author": "Bolotin Dmitry",
   "license": "ISC",
@@ -24,7 +27,10 @@
     "css-mqpacker": "^5.0.1",
     "del": "^2.2.2",
     "emitty": "^1.4.0",
-    "eslint": "^4.1.1",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-csso": "^3.0.0",
     "gulp-htmlmin": "^3.0.0",
@@ -43,11 +49,12 @@
     "gulp-size": "^2.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-useref": "^3.1.2",
-    "node-normalize-scss": "^1.4.0",
     "postcss-flexbugs-fixes": "^3.0.0",
+    "pre-commit": "^1.2.2",
+    "precss": "^2.0.0",
     "syncy": "^2.2.2",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.4.5",
+    "webpack-dev-server": "^2.5.1",
     "webpack-stream": "^3.2.0"
   },
   "engines": {
@@ -55,8 +62,32 @@
   },
   "dependencies": {
     "install": "^0.10.1",
+    "node-normalize-scss": "^3.0.0",
     "npm": "^4.5.0",
     "picturefill": "^3.0.2"
   },
-  "preferGlobal": false
+  "preferGlobal": false,
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "plugins": [
+      "import"
+    ],
+    "env": {
+      "browser": true
+    },
+    "root": true
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "_gulp-configs/**/*.js",
+    "build",
+    "src/js/index.js",
+    "webpack.config.js",
+    "gulpfile.js"
+  ]
 }
