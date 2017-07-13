@@ -61,8 +61,8 @@ gulp.task('build', gulp.series(
   'clean',
   'pug:build',
   'scss:build',
+  'styles:build',
   gulp.parallel(
-    'styles:build',
     'html:build',
     'webpack:build',
     'images:build',
