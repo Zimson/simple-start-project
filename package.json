@@ -51,7 +51,6 @@
     "gulp-useref": "^3.1.2",
     "postcss-flexbugs-fixes": "^3.0.0",
     "pre-commit": "^1.2.2",
-    "precss": "^2.0.0",
     "syncy": "^2.2.2",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.1",
